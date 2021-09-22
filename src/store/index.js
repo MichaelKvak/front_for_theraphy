@@ -1,12 +1,16 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import axios from "axios";
+
+import pills from "./modules/pills";
+import auth from "./modules/auth";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+const store = new Vuex.Store({
+  modules: {
+    pills,
+    auth,
+  },
 });
+
+export default store;

@@ -2,6 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import List from "../views/List.vue";
 import Create from "../views/Create.vue";
+import Login from "../views/Login.vue";
+import Signup from "../views/Signup.vue";
 
 Vue.use(VueRouter);
 
@@ -12,10 +14,12 @@ const routes = [
     component: List,
   },
   {
-    path: "/Create",
+    path: "/Create/:id?",
     name: "Create",
     component: Create,
   },
+  { path: "/Login", name: "Login", component: Login },
+  { path: "/Signup", name: "Signup", component: Signup },
 ];
 
 const router = new VueRouter({
